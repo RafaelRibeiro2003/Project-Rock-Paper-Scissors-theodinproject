@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissors</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container"> 
+        <div class="header">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="body">
+            <div class="choice" data-choice="rock">
+                <img src="./images/rock.png" alt="Rock">
+                <h1>Rock</h1>
+            </div>
+
+            <div class="choice" data-choice="paper">
+                <img src="./images/paper.png" alt="Paper">
+                <h1>Paper</h1>
+            </div>
+
+            <div class="choice" data-choice="scissors">
+                <img src="./images/scissor.png" alt="Scissors">
+                <h1>Scissors</h1>
+            </div>
+        </div>
+        <div class="score_container">
+                <div class="player-score">
+                    <h2>Player: </h2>
+                    <h1 class="player-score-number">0</h1>
+                </div>
+
+        <div class="round">
+            <h2>Round <span class="round-number">0</span></h2>
+
+            <div class="choices-result">
+
+                <div class="choice-result">
+                    <img class="human-choice-img" src="./images/rock.png" alt="Player choice">
+                    <h3>Rock</h3>
+                </div>
+
+                <h2>VS</h2>
+
+                <div class="choice-result">
+                    <img class="computer-choice-img" src="./images/paper.png" alt="Computer choice">
+                    <h3>Paper</h3>
+                </div>
+
+            </div>
+
+            <h2 class="result">Choose your move!</h2>
+        </div>
+
+
+                <div class="computer-score">
+                    <h2>Computer: </h2>
+                    <h1 class="computer-score-number">0</h1>
+                </div>
+
+        </div>
+    </div>
+    <div class="final_result">
+        <h1 class="text_final_result">Congratulations</h1>
+
+        <h2>Computer: <span class="final-computer-score">0</span></h2>
+        <h2>Player: <span class="final-player-score">0</span></h2>
+
+        <button class="button_reset">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

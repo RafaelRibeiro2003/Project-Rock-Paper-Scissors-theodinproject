@@ -1,0 +1,174 @@
+body{
+    background-color: rgb(86, 86, 250);
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10rem 1fr 15rem;
+    grid-template-columns: 1fr;
+
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*Header*/
+.header{
+    display: flex;
+    grid-row: 1 / 2;
+    justify-content: center;
+    
+}
+
+.header h1{
+    font-size: 3rem;
+    
+}
+
+
+
+/*Corpo*/
+.body{
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: center;
+    align-items: center;
+
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: transform 0.2s ease;
+}
+
+.body img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.body h1 {
+    margin-top: 0;
+}
+
+
+.choice:hover{
+    box-shadow: 0 0.8rem 1.5rem rgba(86,86,250,.4);
+
+    border: 2px solid black;
+
+    border-radius: 1rem;
+    color: white;
+
+    transform: scale(1.1);
+
+}
+
+
+
+
+/*Score*/
+.score_container {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    align-items: center;
+    text-align: center;
+}
+
+.choices-result {    /*escolhe inicialmente*/
+    display: none;
+}
+
+.choices-result.show {    /*aparece logo depois da escolha*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.choice-result img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+.choice-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/*Final Result*/
+.final_result {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final_result.show {
+    display: flex;
+}
+
+.final_result {
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(90%, 1000px);
+    padding: 3rem;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: rgb(28, 28, 248);
+    border: 4px solid black;
+    border-radius: 20px;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+.final_result.show {
+    display: flex;
+}
+
+
+.button_reset {
+    padding: 0.8rem 2rem;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.button_reset:hover {
+    transform: scale(1.1);
+}
